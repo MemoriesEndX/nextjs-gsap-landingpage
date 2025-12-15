@@ -44,7 +44,7 @@ const servicesData = [
 export default function Services() {
   const handleContactService = (serviceName: string) => {
     const message = encodeURIComponent(`Halo, saya tertarik dengan layanan ${serviceName}`);
-    window.open(`https://wa.me/6281234567890?text=${message}`, "_blank");
+    window.open(`https://wa.me/6282213580380?text=${message}`, "_blank");
   };
 
   return (

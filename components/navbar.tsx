@@ -35,20 +35,20 @@ export default function Navbar() {
         </a>
 
         <div className="space-x-6 hidden md:flex items-center">
-          <a href="/" className="relative font-medium text-[#F4F6F8] hover:text-[#C9A24D] transition-colors duration-300">
+          <a href="/" className="relative font-medium text-[#F4F6F8] hover:text-orange-400 transition-colors duration-300">
             Home
           </a>
-          <a href="https://photobooth-memoriesendxyz.online/" className="relative font-medium text-[#F4F6F8] hover:text-[#C9A24D] transition-colors duration-300">
-            Web Photobooth Portofolio
+          <a href="/website-bisnis" className="relative font-medium text-[#F4F6F8] hover:text-orange-400 transition-colors duration-300">
+            Pembuatan Website
           </a>
-          <a href="https://memoriesendxmovies.blogspot.com/" className="relative font-medium text-[#F4F6F8] hover:text-[#C9A24D] transition-colors duration-300">
-            Web Films Porfolio
+          <a href="/cetak-kaos" className="relative font-medium text-[#F4F6F8] hover:text-orange-400 transition-colors duration-300">
+            Pembuatan Baju
           </a>
-          <a href="https://memoriesendx.github.io/" className="relative font-medium text-[#F4F6F8] hover:text-[#C9A24D] transition-colors duration-300">
-            Web Marcom Porfolio
+          <a href="/mesin-kasir" className="relative font-medium text-[#F4F6F8] hover:text-orange-400 transition-colors duration-300">
+            Pembuatan Mesin Kasir
           </a>
-          <a href="https://cretivox-test-luminance.vercel.app/" className="relative font-medium text-[#F4F6F8] hover:text-[#C9A24D] transition-colors duration-300">
-            Front End Website Porfolio
+          <a href="/toko-cabang" className="relative font-medium text-[#F4F6F8] hover:text-orange-400 transition-colors duration-300">
+            Cabang Grosir
           </a>
         </div>
 
@@ -67,38 +67,38 @@ export default function Navbar() {
           <div className="flex flex-col px-6 py-4 space-y-4">
             <a
               href="/"
-              className="font-medium text-[#1E2A36] hover:text-[#C9A24D] transition-colors duration-300 py-2"
+              className="font-medium text-[#1E2A36] hover:text-orange-500 transition-colors duration-300 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </a>
             <a
-              href="https://photobooth-memoriesendxyz.online/"
-              className="font-medium text-[#1E2A36] hover:text-[#C9A24D] transition-colors duration-300 py-2"
+              href="/website-bisnis"
+              className="font-medium text-[#1E2A36] hover:text-orange-500 transition-colors duration-300 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Web Photobooth Portofolio
+              Pembuatan Website
             </a>
             <a
-              href="https://memoriesendxmovies.blogspot.com/"
-              className="font-medium text-[#1E2A36] hover:text-[#C9A24D] transition-colors duration-300 py-2"
+              href="/cetak-kaos"
+              className="font-medium text-[#1E2A36] hover:text-orange-500 transition-colors duration-300 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Web Films Porfolio
+              Pembuatan Baju
             </a>
             <a
-              href="https://memoriesendx.github.io/"
-              className="font-medium text-[#1E2A36] hover:text-[#C9A24D] transition-colors duration-300 py-2"
+              href="/mesin-kasir"
+              className="font-medium text-[#1E2A36] hover:text-orange-500 transition-colors duration-300 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Web Marcom Porfolio
+              Pembuatan Mesin Kasir
             </a>
             <a
-              href="https://cretivox-test-luminance.vercel.app/"
-              className="font-medium text-[#1E2A36] hover:text-[#C9A24D] transition-colors duration-300 py-2"
+              href="/toko-cabang"
+              className="font-medium text-[#1E2A36] hover:text-orange-500 transition-colors duration-300 py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Front End Website Porfolio
+              Cabang Grosir
             </a>
           </div>
         </div>

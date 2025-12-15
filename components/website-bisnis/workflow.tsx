@@ -130,13 +130,13 @@ export default function Workflow() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
-                onClick={() => window.open("https://wa.me/6281234567890?text=Halo, saya ingin konsultasi tentang alur project website", "_blank")}
+                onClick={() => window.open("https://wa.me/6282213580380?text=Halo, saya ingin konsultasi tentang alur project website", "_blank")}
                 className="px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors duration-300 font-medium"
               >
                 Konsultasi Gratis
               </button>
               <button
-                onClick={() => window.open("https://wa.me/6281234567890?text=Halo, saya ingin tanya tentang estimasi timeline project", "_blank")}
+                onClick={() => window.open("https://wa.me/6282213580380?text=Halo, saya ingin tanya tentang estimasi timeline project", "_blank")}
                 className="px-6 py-3 bg-transparent border-2 border-neutral-700 text-white rounded-lg hover:bg-neutral-800 transition-colors duration-300 font-medium"
               >
                 Tanya Timeline

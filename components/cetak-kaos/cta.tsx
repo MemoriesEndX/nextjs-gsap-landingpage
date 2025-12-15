@@ -29,7 +29,7 @@ export default function CTA() {
   }, [])
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/6281234567890?text=Halo, saya ingin konsultasi cetak kaos", "_blank")
+    window.open("https://wa.me/6282213580380?text=Halo, saya ingin konsultasi cetak kaos", "_blank")
   }
 
   return (

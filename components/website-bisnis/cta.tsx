@@ -6,11 +6,11 @@ import { MessageCircle, Phone, Mail, ArrowRight } from "lucide-react";
 export default function CTASection() {
   const handleWhatsApp = () => {
     const message = encodeURIComponent("Halo, saya tertarik dengan jasa pembuatan website bisnis. Mohon informasi lebih lanjut mengenai harga dan estimasi project.");
-    window.open(`https://wa.me/6281234567890?text=${message}`, "_blank");
+    window.open(`https://wa.me/6282213580380?text=${message}`, "_blank");
   };
 
   const handleCall = () => {
-    window.location.href = "tel:+6281234567890";
+    window.location.href = "tel:+6282213580380";
   };
 
   const handleEmail = () => {
@@ -68,7 +68,7 @@ export default function CTASection() {
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Phone className="h-5 w-5" />
-              <span className="text-sm">+62 812-3456-7890</span>
+              <span className="text-sm">+62 822-1358-0380</span>
             </button>
             
             <div className="hidden sm:block w-px h-6 bg-white/30"></div>

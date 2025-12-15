@@ -213,7 +213,7 @@ export default function Portfolio() {
             <Button 
               size="lg"
               className="bg-orange-600 hover:bg-orange-700"
-              onClick={() => window.open("https://wa.me/6281234567890?text=Halo, saya tertarik untuk membuat project website", "_blank")}
+              onClick={() => window.open("https://wa.me/6282213580380?text=Halo, saya tertarik untuk membuat project website", "_blank")}
             >
               Mulai Project Anda
               <ExternalLink className="ml-2 h-5 w-5" />

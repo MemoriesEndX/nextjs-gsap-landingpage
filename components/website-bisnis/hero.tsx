@@ -5,11 +5,11 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 export default function Hero() {
   const handleContact = () => {
-    window.open("https://wa.me/6281234567890?text=Halo, saya tertarik dengan jasa pembuatan website bisnis", "_blank");
+    window.open("https://wa.me/6282213580380?text=Halo, saya tertarik dengan jasa pembuatan website bisnis", "_blank");
   };
 
   const handleConsultation = () => {
-    window.open("https://wa.me/6281234567890?text=Halo, saya ingin konsultasi gratis untuk project website", "_blank");
+    window.open("https://wa.me/6282213580380?text=Halo, saya ingin konsultasi gratis untuk project website", "_blank");
   };
 
   return (

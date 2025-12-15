@@ -94,7 +94,7 @@ export default function FAQ() {
               Tim kami siap menjawab semua pertanyaan Anda dan memberikan konsultasi gratis untuk project Anda
             </p>
             <button
-              onClick={() => window.open("https://wa.me/6281234567890?text=Halo, saya memiliki pertanyaan tentang jasa pembuatan website", "_blank")}
+              onClick={() => window.open("https://wa.me/6282213580380?text=Halo, saya memiliki pertanyaan tentang jasa pembuatan website", "_blank")}
               className="px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors duration-300 font-medium shadow-lg hover:shadow-xl hover:shadow-orange-500/20"
             >
               Hubungi Kami Sekarang

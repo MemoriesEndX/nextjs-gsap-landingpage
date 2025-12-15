@@ -10,48 +10,52 @@ import FAQ from "@/components/website-bisnis/faq";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Jasa Pembuatan Website Bisnis & Super App | Custom & Profesional",
+  title: "Jasa Pembuatan Website Bisnis & Super App Custom - Profesional & SEO Friendly | Toko Dafa",
   description:
-    "Jasa pembuatan website company profile, website bisnis, sistem informasi, dan super app. Sistem custom sesuai kebutuhan, scalable, modern, dan SEO friendly. Solusi digital untuk bisnis, instansi, dan startup.",
+    "Jasa pembuatan website company profile, website bisnis, sistem informasi, e-commerce, dan super app custom. Teknologi modern (Next.js, React), responsive, SEO optimized, scalable, dan user-friendly. Solusi digital untuk bisnis, instansi pemerintah, startup, dan UMKM. Konsultasi gratis, harga kompetitif, garansi purna jual.",
   keywords: [
-    "website bisnis",
-    "jasa pembuatan website",
-    "company profile",
-    "super app",
-    "web development",
-    "sistem informasi",
+    "jasa pembuatan website bisnis",
+    "jasa website company profile",
+    "web development profesional",
+    "super app indonesia",
     "aplikasi web custom",
     "jasa web developer",
-    "pembuatan website profesional",
     "website perusahaan",
-    "website instansi",
+    "website instansi pemerintah",
+    "sistem informasi custom",
+    "website e-commerce",
+    "website toko online",
+    "jasa website SEO friendly",
+    "pembuatan website Next.js",
     "web development indonesia",
+    "website startup",
+    "website UMKM",
   ],
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+  authors: [{ name: "Toko Dafa" }],
+  creator: "Toko Dafa",
+  publisher: "Toko Dafa",
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://yourdomain.com/website-bisnis",
-    title: "Jasa Pembuatan Website Bisnis & Super App | Custom & Profesional",
+    url: "https://tokodafa.com/website-bisnis",
+    title: "Jasa Pembuatan Website Bisnis & Super App Custom | Toko Dafa",
     description:
-      "Solusi digital custom untuk bisnis, instansi, dan startup. Website modern, scalable, dan SEO friendly.",
-    siteName: "Your Company Name",
+      "Solusi digital custom untuk bisnis, instansi, dan startup. Website modern dengan Next.js, scalable, SEO friendly, dan responsive. Konsultasi gratis!",
+    siteName: "Toko Dafa",
     images: [
       {
         url: "/og-image-website-bisnis.jpg",
         width: 1200,
         height: 630,
-        alt: "Jasa Pembuatan Website Bisnis & Super App",
+        alt: "Jasa Pembuatan Website Bisnis & Super App - Toko Dafa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jasa Pembuatan Website Bisnis & Super App",
+    title: "Jasa Pembuatan Website Bisnis & Super App Custom",
     description:
-      "Solusi digital custom untuk bisnis, instansi, dan startup. Website modern, scalable, dan SEO friendly.",
+      "Website modern, scalable, dan SEO friendly untuk bisnis, instansi, dan startup. Teknologi Next.js. Konsultasi gratis!",
     images: ["/og-image-website-bisnis.jpg"],
   },
   robots: {
@@ -66,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://yourdomain.com/website-bisnis",
+    canonical: "https://tokodafa.com/website-bisnis",
   },
   category: "Web Development Services",
 };

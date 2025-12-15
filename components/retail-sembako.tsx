@@ -118,7 +118,7 @@ export default function RetailSembako() {
 
   const handleWhatsAppOrder = (productName: string) => {
     const message = encodeURIComponent(`Halo, saya ingin memesan ${productName}`)
-    window.open(`https://wa.me/6281234567890?text=${message}`, "_blank")
+    window.open(`https://wa.me/6282213580380?text=${message}`, "_blank")
   }
 
   return (
