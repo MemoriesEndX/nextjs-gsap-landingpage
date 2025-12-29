@@ -3,28 +3,39 @@
 ## 🔴 Root Cause Analysis
 
 ### The Problem
-**Error:** `TurbopackInternalError: Dependency tracking is disabled so invalidation is not allowed`
+**Error:** `This build is using Turbopack, with a webpack config and no turbopack config`
 
 ### Why It Happened
-1. **Next.js 16.x Default Behavior**: Next.js 16 may attempt to use Turbopack by default in certain build scenarios
-2. **Turbopack Instability**: Turbopack is still experimental and not production-ready for all use cases
-3. **GSAP/Animation Libraries**: Heavy animation usage with GSAP may trigger edge cases in Turbopack's dependency tracking
-4. **Missing Explicit Configuration**: No explicit bundler selection was configured
+1. **Next.js 16 Default Behavior**: Next.js 16 enables Turbopack by default
+2. **Conflicting Configuration**: Webpack config present without explicit bundler selection
+3. **Turbopack Instability**: Turbopack is still experimental and not production-ready for all use cases
+4. **GSAP/Animation Libraries**: Heavy animation usage with GSAP may trigger edge cases in Turbopack's dependency tracking
 
 ### Technical Explanation
-Turbopack's dependency tracking system requires specific invalidation patterns. When using animation libraries like GSAP with dynamic imports or complex client-side effects, Turbopack may encounter scenarios where it cannot properly track dependencies, causing the build to fail.
+In Next.js 16+, Turbopack is the default bundler. When a webpack configuration exists without explicitly choosing the bundler (via `--webpack` or `--turbopack` flag), the build system defaults to Turbopack but detects webpack config, creating a conflict. This causes "Call retries were exceeded" errors during build.
 
 ---
 
 ## ✅ What Was Fixed
 
-### 1. **next.config.mjs** - Complete Rewrite
+### 1. **package.json** - Force Webpack Build
+```json
+"scripts": {
+  "build": "next build --webpack",
+  "dev": "next dev",
+  "lint": "eslint .",
+  "start": "next start",
+  "clean": "rm -rf .next"
+}
+```
+
+**Key Change:**
+- ✅ `--webpack` flag - Explicitly forces Webpack bundler (required for Next.js 16+)
+
+### 2. **next.config.mjs** - Production Configuration
 ```javascript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Explicitly disable Turbopack for stable builds
-  turbo: undefined,
-  
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
@@ -60,21 +71,9 @@ export default nextConfig
 ```
 
 **Key Changes:**
-- ✅ `turbo: undefined` - Explicitly disables Turbopack
 - ✅ `reactStrictMode: true` - Enables production best practices
 - ✅ `webpack` configuration - Ensures stable Webpack bundler with proper fs fallback
-- ✅ Removed experimental Turbopack features
-
-### 2. **package.json** - Added Clean Script
-```json
-"scripts": {
-  "build": "next build",
-  "dev": "next dev",
-  "lint": "eslint .",
-  "start": "next start",
-  "clean": "rm -rf .next"
-}
-```
+- ✅ Removed Turbopack configuration (uses --webpack flag instead)
 
 ---
 
@@ -121,10 +120,13 @@ pnpm run build
 5. Redeploy
 
 ### Option B: Force Clean Deploy
-Add to your `vercel.json` (create if doesn't exist):
+Your Vercel build will automatically use the `--webpack` flag from package.json.
+No additional configuration needed.
+
+Optionally, add to your `vercel.json` (create if doesn't exist) for cache control:
 ```json
 {
-  "buildCommand": "rm -rf .next && pnpm run build",
+  "buildCommand": "pnpm run build",
   "installCommand": "pnpm install --frozen-lockfile"
 }
 ```
@@ -228,14 +230,19 @@ export default function RootLayout({ children }) {
 
 ### Build Still Failing?
 
-#### Check 1: Verify No Dev Mode Flags
-Ensure you're not accidentally using `--turbo` flag:
+#### Check 1: Verify Build Command Uses --webpack
+Ensure package.json has:
+```json
+"build": "next build --webpack"
+```
+
+Not:
 ```bash
-# ❌ Wrong
-next build --turbo
+# ❌ Wrong (will use Turbopack by default in Next.js 16)
+"build": "next build"
 
 # ✅ Correct
-next build
+"build": "next build --webpack"
 ```
 
 #### Check 2: Clear All Caches
@@ -301,8 +308,9 @@ Route (app)                              Size     First Load JS
 
 ## 📌 Summary Checklist
 
-- [x] Updated `next.config.mjs` with explicit Webpack configuration
-- [x] Set `turbo: undefined` to disable Turbopack
+- [x] Updated `package.json` build script to use `--webpack` flag
+- [x] Updated `next.config.mjs` with production-safe Webpack configuration
+- [x] Removed Turbopack configuration (using explicit --webpack flag)
 - [x] Added `reactStrictMode: true` for production safety
 - [x] Added webpack fallback for animation libraries
 - [x] Added clean script to package.json

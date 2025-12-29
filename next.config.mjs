@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Explicitly disable Turbopack for stable builds
-  turbo: undefined,
-  
   // TypeScript configuration
   typescript: {
     ignoreBuildErrors: true,
